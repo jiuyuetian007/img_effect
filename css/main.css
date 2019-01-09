@@ -1,0 +1,487 @@
+/***********
+
+*页面样式
+***********/
+/* =============
+   基本默认值
+  ==============*/
+html {
+    font-size: 62.25%;
+    color: #222222;
+}
+
+::selection{  /*替代游览器选中的默认样式*/
+    background-color: #b3d4fc;
+    text-shadow:none ;
+}
+ul{
+    margin:0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+/* =============
+    工具样式
+  ==============*/
+/*在父元素中居中显示*/
+.center-block{
+    display: block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+/*向右浮动*/
+.pull-right{
+    float:right!important;
+}
+
+/*向左浮动*/
+.pull-left{
+    float: left!important;
+}
+
+/*文本左对齐显示*/
+.text-right{
+    text-align: right!important;
+}
+
+/*文本右对齐显示*/
+.text-left{
+    text-align: left!important;
+}
+.hide{
+    display: none!important;
+}
+.show{
+    display: block!important;
+}
+.invisible{
+    visibility: hidden;
+}
+/*隐藏文本*/
+.text-hide{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+/*浏览器更新提示*/
+
+.browserupgrade{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+
+/*自定义页面样式*/
+
+body{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+/*网站头部*/
+header{
+    width: 100%;
+}
+
+
+header .main{
+    padding: 0 1.5em ;
+    background: #282828;
+    height: 91px;
+    border-bottom: 1px solid #a0a0a0;
+}
+header .main  .brand{
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+    /*padding: 1rem 1.5rem;*/
+}
+header .main  .system{
+    height: 75px;
+    margin-top: 10px;
+    border-left: 1px solid #ffffff;
+    float: left;
+    padding-left: 10px;
+    margin-right: 100px;
+
+}
+header .main .system img{
+    margin-top: 32px;
+
+}
+header .main .zhanghu{
+    width: 250px;
+    float: right;
+}
+header .main .zhanghu li .touxiang{
+    margin-top: 30px;
+    float: left;
+    height: 37px;
+    width: 37px;
+    display:inline-block;
+    border-radius: 1000px;
+    border: 1px solid gray;
+    color: #787d82;
+    text-align: center;
+    padding:  6px;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    transition: background-color .2s;
+}
+header .main .zhanghu li .touxiang img{
+    height: 37px;
+    width: 37px;
+    text-align: center;
+
+}
+.touxiang span{
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 100;
+    padding: 0px 6px;
+    position: relative;
+    top: -50px;
+    left: 20px;
+    display:inline-block;
+    background-color: red;
+    color: #ffffff;
+}
+.zname{
+    float: left;
+    display:inline-block;
+    margin-top: 45px;
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 15px;
+}
+.zname span{
+margin-right: 5px;
+}
+.dianyuan{
+    margin-left: 60px;
+    float: left;
+    display: inline-block;
+    margin-top: 40px;
+}
+header .main .nav_list li{
+    float: left;
+    display:inline-block;
+     height: 20px;
+    margin-top: 50px;
+}
+header .main .nav_list li+li{
+    border-left:1px solid #f0ede9;
+}
+header .main .nav_list li a{
+    display:inline-block;
+    padding: 0 1.5rem;
+    /*line-height:5.5rem;*/
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+header .main .nav_list li a:hover,
+header .main .nav_list li a:active,
+header .main .nav_list li a.active{
+    color: #ffffff;
+    background-color: lightgray;
+}
+@media only screen and (max-width:50em) {
+header .main .brand{
+    float: none;
+    display: block;
+    padding: 0;
+    margin:1.5rem auto 1.5rem;
+    text-align: center;
+}
+    header .main ul{
+        text-align: center;
+    }
+    header .main ul li{
+        border: none;
+    }
+    header .main ul li a{
+        padding:0 1.5rem;
+    }
+}
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+
+}
+@media only screen and (max-width: 30em) {
+    header .main ul {
+        line-height: 3rem;
+    }
+    header .main ul li:first-child{
+        display: none;
+    }
+    header .main ul li a{
+        font-weight: normal;
+        padding:0 0.5rem;
+    }
+    }
+/*网站主要内容*/
+.container{
+    width: 100%;
+}
+
+/*滚动广告*/
+
+/*平台特点*/
+.feature{
+    width: 97%;
+    margin:2rem auto;
+    margin-top: 10rem;
+
+    /*font-size: 1.4;*/
+    /*防止有间隙*/
+}
+/*.feature ul li .biaoqian img:hover {*/
+    /*-moz-transform: scale(1.1) rotate(0deg);*/
+    /*-webkit-transform: scale(1.1) rotate(0deg);*/
+    /*-o-transform: scale(1.1) rotate(0deg);*/
+    /*-ms-transform: scale(1.1) rotate(0deg);*/
+    /*transform: scale(1.1) rotate(0deg);*/
+/*}*/
+.feature ul li .biaoqian{
+    width: 100%;
+}
+.feature ul li .biaoqian span:last-child{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2.6rem;
+    width: 1rem;
+    position: relative;
+    top:-270px;
+    text-align: center;
+    left: -75px;
+}
+
+.feature ul li .biaoqian img{
+
+   margin-left: 1.4rem;
+ }
+.feature ul{
+    text-align: center;
+    width: 100%;
+}
+
+.feature ul li{
+    float: left;
+    width: 20%;
+    /*padding: 1rem;*/
+}
+
+.feature ul li div{
+    float: left;
+}
+.feature .menu{
+    float: left;
+    width: 440px;
+}
+.feature .menu .pane ul li{
+    width:25%;
+    float: left;
+}
+.feature .menu ul li{
+    width: 35%;
+    float: left;
+}
+
+.feature .menu ul li a{
+display: inline-block;
+
+}
+.feature .menu ul .item a{
+    display: inline-block;
+margin-left: 6rem;
+}
+/*.tabulous_active{*/
+
+    /*margin-left: 3rem;*/
+/*}*/
+
+.feature .menu ul li a h2{
+  color: #b4b4b4;
+}
+.feature .menu ul li a h3{
+    color: #b4b4b4;
+    margin-top: 0px;
+}
+.feature ul li div {
+    text-align: center;
+}
+ .pane{
+   margin-left: 6rem;
+     padding-top: 2rem;
+    border-top:1px solid #b4b4b4;
+    width:85%;
+}
+.pane ul{
+     width: 100%;
+ }
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    .feature .item h3,
+    .feature .item p{
+        display: block;
+        width: 100%;
+        font-size:2.6rem;
+        text-align: center;
+    }
+    .feature .item p{
+        font-size:1.2rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+   .feature{
+       width: 96%;
+       margin:1rem auto;
+   }
+    .feature .item{
+        display: block;
+        width: auto;
+    }
+    .feature .item + .item{
+        margin:1rem 0 0;
+    }
+}
+
+
+
+/*底部*/
+footer{
+    width: 100%;
+
+    padding: 42px 0 70px;
+    /*background-color: #ededed;*/
+}
+footer ul{
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+}
+footer ul li .icon{
+    display:inline-block;
+    text-indent: -999rem;
+    margin-right:1.5rem;
+    background: url("https://i.alipayobjects.com/e/201307/jebmKcbrh.png") no-repeat;
+    background-size: 466px 447px;
+    overflow: hidden;
+}
+footer ul li .icon-zfywxk{
+    width:38px;
+    height: 27px;
+    background-position: -369px -45px;
+}
+footer ul li .icon-pcirk{
+    width :78px;
+    height: 27px;
+    background-position: -110px -96px;
+}
+footer ul li .icon-visayz{
+    width: 36px;
+    height: 27px;
+    background-position: -426px -90px;
+}
+footer ul li .icon-vsjmfw{
+    width:63px;
+    height:27px;
+    margin-right: 13px;
+    background-position: -401px -186px;
+}
+footer ul li .icon-wlgs{
+    width: 22px;
+    height: 27px;
+    background-position: -48px -48px;
+}
+footer ul li .icon-rzcx{
+    width: 75px;
+    height: 27px;
+    background-position: 0 -320px;
+}
+footer ul li .icon-gs{
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    background: url("https://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png") no-repeat;
+}
+footer p{
+    text-align: center;
+    color: #999;
+}
+/*打印样式*/
+@media print {
+    *,
+    *:before,
+    *:after{
+        background: transparent!important;
+        color: #000!important;
+        box-shadow:none!important;
+        text-shadow: none!important;
+    }
+    a,
+    a:visited{
+        text-decoration: underline;
+    }
+    a[href]:after{
+        content: "(" attr(href) ")";
+    }
+    abbr[title]:after{
+        content: "(" attr(title) ")";
+    }
+
+    /*使用#和javascript的超链接不打印href*/
+    a[href^="#"]:after,
+    a[href^="javascript"]:after{
+        content: "";
+    }
+    pre,
+    blockquote{
+        border:1px solid #999;
+        page-break-inside:avoid;
+    }
+    thead{
+        display: table-header-group;
+    }
+    tr,
+    img{
+        page-break-inside: avoid;
+    }
+    img{
+        max-width: 100%!important;
+    }
+    p,
+    h2,
+    h3{
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3{
+        page-break-after: avoid;
+    }
+
+}
+
+
+
+
